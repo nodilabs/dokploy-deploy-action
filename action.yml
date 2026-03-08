@@ -1,4 +1,4 @@
-name: 'DokPloy Deploy Action'
+name: 'DokPloy Deploy'
 description: 'Deploy applications to DokPloy by updating Docker providers and triggering deployments'
 branding:
   icon: 'upload-cloud'
