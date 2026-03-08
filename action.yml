@@ -1,4 +1,4 @@
-name: 'DokPloy Deploy'
+name: 'DokPloy Deploy by NodiLabs'
 description: 'Deploy applications to DokPloy by updating Docker providers and triggering deployments'
 branding:
   icon: 'upload-cloud'
