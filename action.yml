@@ -1,0 +1,23 @@
+name: 'DokPloy Deploy Action'
+description: 'Deploy applications to DokPloy by updating Docker providers and triggering deployments'
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
+
+inputs:
+  dokploy_api_key:
+    description: 'DokPloy API key for authentication'
+    required: true
+  dokploy_server_url:
+    description: 'DokPloy server URL'
+    required: true
+  application_ids:
+    description: 'Comma-separated list of DokPloy application IDs to deploy'
+    required: true
+  image_tag:
+    description: 'Docker image tag to deploy'
+    required: true
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
