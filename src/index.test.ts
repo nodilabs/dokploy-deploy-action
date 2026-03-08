@@ -44,7 +44,7 @@ describe('DokPloy Deploy Action', () => {
       `${mockConfig.serverUrl}/api/application.saveDockerProvider`,
       {
         applicationId: mockConfig.applicationIds[0],
-        imageTag: 'latest'
+        dockerImage: 'latest'
       },
       {
         headers: {
@@ -59,7 +59,7 @@ describe('DokPloy Deploy Action', () => {
       `${mockConfig.serverUrl}/api/application.saveDockerProvider`,
       {
         applicationId: mockConfig.applicationIds[1],
-        imageTag: 'latest'
+        dockerImage: 'latest'
       },
       {
         headers: {
