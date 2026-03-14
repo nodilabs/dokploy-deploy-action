@@ -9,7 +9,7 @@ A GitHub Action that automates deployments to [Dokploy](https://dokploy.com) by 
 
 For each application ID you provide, the action performs two sequential API calls:
 
-1. **Update Docker provider** — sets the Docker image tag on the application via `application.saveDockerProvider`
+1. **Update Docker provider** — sets the Docker image tag on the application via `application.update`
 2. **Trigger deployment** — redeploys the application with the new image via `application.deploy`
 
 If either step fails for any application, the action stops and marks the workflow as failed.
