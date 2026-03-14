@@ -11,10 +11,12 @@ interface DokPloyConfig {
 async function updateDockerProvider(config: DokPloyConfig, applicationId: string): Promise<void> {
   try {
     const response = await axios.post(
-      `${config.serverUrl}/api/application.saveDockerProvider`,
+      `${config.serverUrl}/api/application.update`,
       {
         applicationId,
-        dockerImage: config.imageTag
+        dockerImage: config.imageTag,
+        sourceType: 'docker',
+        applicationStatus: 'idle'
       },
       {
         headers: {
