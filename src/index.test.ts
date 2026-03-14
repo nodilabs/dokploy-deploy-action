@@ -41,10 +41,12 @@ describe('DokPloy Deploy Action', () => {
 
     // Verify Docker provider updates
     expect(mockedAxios.post).toHaveBeenCalledWith(
-      `${mockConfig.serverUrl}/api/application.saveDockerProvider`,
+      `${mockConfig.serverUrl}/api/application.update`,
       {
         applicationId: mockConfig.applicationIds[0],
-        dockerImage: 'latest'
+        dockerImage: 'latest',
+        sourceType: 'docker',
+        applicationStatus: 'idle'
       },
       {
         headers: {
@@ -56,10 +58,12 @@ describe('DokPloy Deploy Action', () => {
     );
 
     expect(mockedAxios.post).toHaveBeenCalledWith(
-      `${mockConfig.serverUrl}/api/application.saveDockerProvider`,
+      `${mockConfig.serverUrl}/api/application.update`,
       {
         applicationId: mockConfig.applicationIds[1],
-        dockerImage: 'latest'
+        dockerImage: 'latest',
+        sourceType: 'docker',
+        applicationStatus: 'idle'
       },
       {
         headers: {
